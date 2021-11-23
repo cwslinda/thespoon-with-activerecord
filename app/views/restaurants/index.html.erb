@@ -1,0 +1,12 @@
+
+<h1>Restaurant Index</h1>
+
+  <div class="card" style="width: 18rem;">
+    <% @restaurants.each do |restaurant| %>
+    <img src="https://source.unsplash.com/random" class="card-img-top" alt="...">
+    <div class="card-body text-center">
+      <h5 class="card-title"><%= restaurant.name %></h5>
+      <%= link_to "view more", restaurant_path(restaurant) %>
+    </div>
+    <% end %>
+  </div>
